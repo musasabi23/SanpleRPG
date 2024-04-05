@@ -37,14 +37,33 @@ namespace SanpleRPG
             return this.hp;
         }
 
-        //攻撃メソッド
-        public void Attack()
+        //問題4-2
+        public void SetName(string name)
         {
-            Console.WriteLine(this.name + "は攻撃した");
+            //引数のnameに文字列が入っていることを確認
+            // 入っていなければname変数の中身はnull(空っぽという意味)になります
+            if (name != null)
+            {
+                // string型の文字列の長さは「変数名.Length」で取得できます
+                int len = name.Length;
+
+                // 文字列の長さが8以下ならメンバ変数nameに代入
+                if (len <= 8)
+                {
+                    this.name = name;
+                }
+            }
         }
 
-        //防御メソッド
-        public void Defense()
+
+        //攻撃メソッド
+        public void Attack()
+    {
+        Console.WriteLine(this.name + "は攻撃した");
+    }
+    }
+    //防御メソッド
+    public void Defense()
         {
             Console.WriteLine(this.name + "は防御した");
         }
