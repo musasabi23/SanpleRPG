@@ -9,8 +9,33 @@ namespace SanpleRPG
     internal class Player
     {
         //list4-1
-        public string name; //プレイヤーの名前
-        public int hp;
+        //list4-7
+        private string name; //プレイヤーの名前
+        private int hp; //プレイヤーの名前
+
+        //list4-3
+        //Playerクラスのコンストラクタ
+        //list4-5
+        public Player(string name, int hp)
+        {
+            this.name = name;
+            this.hp = hp;
+        }
+
+        //list4-9
+        public void SetHp(int hp)
+        {
+            this.hp = hp;
+            if (this.hp < 0)
+            {
+                this.hp = 0;
+            }
+        }
+        //hp変数の値を取得する
+        public int GetHp()
+        {
+            return this.hp;
+        }
 
         //攻撃メソッド
         public void Attack()
