@@ -3,8 +3,6 @@
 //list4-4
 //list4-6
 Player player = new Player("ひろし", 100);
-
-int hp = player.GetHp();
-int newHP = hp - 2000;
-player.SetHp(newHP);
-Console.WriteLine("HPは" + player.GetHp());
+//playerのHpプロパティ代入
+player.Hp -= 70;
+Console.WriteLine("HPは" + player.Hp);
