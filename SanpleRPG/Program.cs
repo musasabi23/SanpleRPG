@@ -2,6 +2,8 @@
 //list4-2
 //list4-4
 //list4-6
+//list4-11
+
 Player player = new Player("ひろし", 100);
 //playerのHpプロパティ代入
 player.Hp -= 70;
